@@ -263,6 +263,10 @@ a.btn {
     .hero {
         flex-direction: column;
     }
+    
+    .heroimg {
+        width:150px;
+    }
 
     a:link, a:visited {
         font-size:15px;
