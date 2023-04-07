@@ -1,7 +1,14 @@
+:root {
+    --green: #2DDD29;
+    --pink: #F2357B;
+    --orange: #F28705;
+    --sand: #F8E8DA;
+}
+
 
 body {
     font-family: Jura;
-    background-color: #F8E8DA;
+    background-color: var(--sand);
 }
 
 
@@ -27,6 +34,23 @@ p {
 }
 
 
+.orangerad {
+    background-image: radial-gradient(var(--orange), rgba(215, 111, 0, 0), transparent 100px);
+}
+
+.pinkrad {
+    background-image: radial-gradient(var(--pink), rgba(215, 0, 186, 0), transparent 100px);
+}
+
+.greenrad {
+    background-image: radial-gradient(var(--green), rgba(21, 215, 0, 0), transparent 100px);
+}
+
+.greenlinr {
+    background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
+}
+
+
 .title-circles {
     display:flex;
     position:absolute;
@@ -40,18 +64,6 @@ p {
     height:100px;
     border-radius:50%;
     margin-right: 10px;
-}
-
-.orangerad {
-    background-image: radial-gradient(#F28705, rgba(215, 111, 0, 0), transparent 100px);
-}
-
-.pinkrad {
-    background-image: radial-gradient(#F2357B, rgba(215, 0, 186, 0), transparent 100px);
-}
-
-.greenrad {
-    background-image: radial-gradient(#2DDD29, rgba(21, 215, 0, 0), transparent 100px);
 }
 
 
@@ -92,7 +104,7 @@ p {
 
 
 #active {
-    text-decoration: underline solid 5px #F28705;
+    text-decoration: underline solid 5px var(--orange);
 }
 
 .content {
@@ -123,9 +135,7 @@ p {
     font-size: 25px;
 }
 
-.greenlin {
-    background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
-}
+
 
 .card {
     color: white;
@@ -144,11 +154,10 @@ p.card {
     margin-block-end:none;
 }
 
-
 .btn {
     display: flex;
     justify-content: center;
-    background-color: #2DDD29;
+    background-color: var(--green);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     font-family: 'Nova Round';
@@ -174,7 +183,7 @@ a.btn {
 
 .footerimg {
     display:block;
-    margin: 30px auto 30px auto;
+    margin: 40px auto 40px auto;
     width: 50px;
 }
 
@@ -198,7 +207,7 @@ a.btn {
 
 .home {
     display: flex;
-    background-color: #F2357B;
+    background-color: var(--pink);
     padding: 10px;
     border-radius: 8px;
     border: solid 1px black;
@@ -210,7 +219,7 @@ a.btn {
 .mail {
     display: flex;
     justify-self: center;
-    background-color: #2DDD29;
+    background-color: var(--green);
     padding: 10px;
     border-radius: 8px;
     border: solid 1px black;
@@ -221,7 +230,7 @@ a.btn {
 
 .linkedin {
     display: flex;
-    background-color: #F28705;
+    background-color: var(--orange);
     padding: 10px;
     border-radius: 8px;
     border: solid 1px black;
@@ -276,3 +285,42 @@ a.btn {
 
     }
 
+
+/*SKILLS*/
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.orangelinr {
+    align-self: end;
+    background-image: linear-gradient(to left, var(--orange), rgba(221, 155, 41, 0));
+    padding: 15px;
+}
+
+.pinklin {
+    align-self: start;
+    background-image: linear-gradient(to right, var(--pink), rgba(221, 41, 215, 0));
+    padding: 15px;
+}
+
+.skillimg {
+    height:100px;
+    width:100px;
+}
+
+.center {
+    max-width: 630px;
+    margin: auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
