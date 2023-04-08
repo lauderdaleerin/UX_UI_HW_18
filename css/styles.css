@@ -19,6 +19,18 @@ h1 {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+h2 {
+    font-family: 'Jura';
+    font-size: 30px;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: 'Nova Round';
+    font-size: 28px;
+    font-weight: 100;
+}
+
 
 a:link, a:visited {
     color: white;
@@ -30,7 +42,7 @@ a:link, a:visited {
 
 p {
     font-family: Jura;
-    font-size: medium;
+    font-size: 20px;
 }
 
 
@@ -48,10 +60,12 @@ p {
 
 .greenlinr {
     background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
+    padding: 10px;
 }
 
 .greenlin {
-    background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
+    background-image: linear-gradient(to right, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
+    padding: 10px;
 }
 
 
@@ -304,15 +318,16 @@ a.btn {
 }
 
 .orangelinr {
-    align-self: end;
+    align-self: flex-end;
+    text-align: end;
     background-image: linear-gradient(to left, var(--orange), rgba(221, 155, 41, 0));
-    padding: 15px;
+    padding: 10px;
 }
 
 .pinklin {
-    align-self: start;
+    align-self: flex-start;
     background-image: linear-gradient(to right, var(--pink), rgba(221, 41, 215, 0));
-    padding: 15px;
+    padding: 10px;
 }
 
 .skillimg {
@@ -331,54 +346,33 @@ a.btn {
 
 
 /*PORTFOLIO*/
-/*I think 3 flex rows in a flex column makes more sense for this content but I wanted to try grid lol */
+/*I tried grid here and did not have success*/
 
 .portfolio {
-    display: grid;
-    grid-template:
-        "t1 t1 t1 i1 i1" 20%
-        "i2 i2 t2 t2 t2" 20%
-        "t3 t3 t3 i3 i3" 20%/ 1fr 1fr 1fr;
-
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .portfolio-card {
-    margin: 15px;
-}
-
-.t1 {
-    grid-area: "t1";
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
 }
 
-.i1, .i2, .i3 {
-    object-fit: contain;
-    width: 40%;
-}
-
-
-.i1 {
-    grid-area: "i1";
+.t1, .t2, .t3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .t2 {
-    grid-area: "t2";
-    align-items: center;
-    justify-content: flex-end;
+    text-align: end;
 }
 
-.i2 {
-    grid-area: "i2";
+.i1, .i2, .i3 {
+    display:flex;
+    width:40%;
+    justify-content: end;
 }
-
-.t3 {
-    grid-area:"t3";
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.i3 {
-    grid-area: "i3";
-}
-
