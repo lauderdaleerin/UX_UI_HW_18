@@ -50,6 +50,10 @@ p {
     background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
 }
 
+.greenlin {
+    background-image: linear-gradient(to left, rgba(45, 221, 41, 0.21), rgba(45, 221, 41, 0));
+}
+
 
 .title-circles {
     display:flex;
@@ -324,3 +328,57 @@ a.btn {
 .underline {
     text-decoration: underline;
 }
+
+
+/*PORTFOLIO*/
+/*I think 3 flex rows in a flex column makes more sense for this content but I wanted to try grid lol */
+
+.portfolio {
+    display: grid;
+    grid-template:
+        "t1 t1 t1 i1 i1" 20%
+        "i2 i2 t2 t2 t2" 20%
+        "t3 t3 t3 i3 i3" 20%/ 1fr 1fr 1fr;
+
+}
+
+.portfolio-card {
+    margin: 15px;
+}
+
+.t1 {
+    grid-area: "t1";
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.i1, .i2, .i3 {
+    object-fit: contain;
+    width: 40%;
+}
+
+
+.i1 {
+    grid-area: "i1";
+}
+
+.t2 {
+    grid-area: "t2";
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.i2 {
+    grid-area: "i2";
+}
+
+.t3 {
+    grid-area:"t3";
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.i3 {
+    grid-area: "i3";
+}
+
