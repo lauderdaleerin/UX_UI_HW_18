@@ -334,7 +334,7 @@ a.btn {
 
 .skill-card {
     margin: 10px;
-    max-width: 500px;
+    max-width: 600px;
 
 }
 
@@ -413,7 +413,7 @@ a.btn {
 }
 
 /*PORTFOLIO*/
-/*tried to do grid here and did not have success, but was able to do the grid activity*/
+/*ended up doing flex inside of grid*/
 
 .portfolio {
     display: flex;
@@ -425,6 +425,7 @@ a.btn {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .t1, .t2, .t3 {
@@ -443,4 +444,51 @@ a.btn {
     display:flex;
     width:40%;
     justify-content: end;
+}
+
+.i2w {
+    display: none;
+}
+
+
+@media (min-width:800px) { 
+    .portfolio {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1400px;
+        margin:auto;
+    }
+
+    .portfolio-card {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    #pmba {
+        flex-direction: column;
+    }
+
+    .t1, .t2, .t3 {
+        flex-direction: column;
+        text-align: center;
+        margin-top:10px;
+    }
+
+    .greenlin, .greenlinr {
+        background-image: radial-gradient(rgba(45, 221, 41, 0.21), transparent, transparent);
+    }
+
+    .i2 {
+        display:none;
+    }
+
+    .i2w {
+        display: flex;
+        margin-top: 150px;
+    }
+
+    .i1, .i2w, .i3 {
+        justify-content: center;
+        width: 90%;
+    }
 }
