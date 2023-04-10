@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     font-family: 'Jura';
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 900;
     margin:0;
 
@@ -198,9 +198,8 @@ p.card {
     margin-bottom: 30px;
     padding:5px;
     border: solid 1px black;
-    width: 50%;
     min-width:250px;
-    max-width:400px;
+    max-width:max-content;
 }
 
 
@@ -391,6 +390,13 @@ a.btn {
 }
 
 
+#ed {
+    flex-direction: column;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: max-content;
+}
+
 @media (min-width:800px) { 
         .skills {
             display: grid;
@@ -401,11 +407,7 @@ a.btn {
             gap: 10px;
             margin:40px;
 
-        .card {
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
-        }
+       
         }
         
 }
