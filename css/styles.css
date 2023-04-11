@@ -128,10 +128,6 @@ p {
     padding: 0;
 }
 
-.scroll {
-    
-}
-
 
 #active {
     text-decoration: underline solid 5px var(--orange);
